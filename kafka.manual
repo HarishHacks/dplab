@@ -1,1 +1,12 @@
+command #(explanation)
+cd #(to switch to home directory)
+cd /home/ubuntu/dplab/kafka-3.8.0-src #(to open the kafka folder)
+bin/kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 #(creating kafka topic)
 
+--------------(open two termainal)----------------------
+              (terminal 1)
+cd /home/ubuntu/dplab/kafka-3.8.0-src #(switch to kafka directory)
+bin/kafka-console-producer.sh --topic test-topic --bootstrap-server localhost:9092 #(run the producer and type the message)
+              (terminal 2)
+cd /home/ubuntu/dplab/kafka-3.8.0-src #(switch to kafka directory)
+bin/kafka-console-consumer.sh --topic test-topic --from-beginning --bootstrap-server localhost:9092 #(get the message from the consumer)
