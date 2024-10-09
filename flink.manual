@@ -1,0 +1,11 @@
+this is a simple manual that will help you to finish apache-flink-lab
+command #(explanation)
+cd #(switch to home directory)
+cd dplab #(open dplab)
+chmod 777 flink.sh #(change permission of the file)
+sudo su #(switch to root user)
+./flink.sh
+cd /home/ubuntu/flink-1.19.1/ #(open flink folder)
+nano input.txt #(opens the text editor and type as you wish and atlast press ctrl+x and after y)
+bin/flink run examples/batch/WordCount.jar -input /home/ubuntu/input.txt -output /home/ubuntu/output.txt #(ask flink to perform wordcout)
+cat output.txt #(output saved in output.txt file and we show it)
